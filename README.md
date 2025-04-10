@@ -22,7 +22,8 @@ Os comandos são a principal forma de interação com o **Blackout Bot**, oferec
 - **/ticket**: Crie um ticket para o seu servidor para prestar suporte aos seus membros.
 - **/setlog**: Permite ao bot registrar eventos em um canal de sua escolha (entrada/saída de membros, banimentos, etc).
 - **Entre outros comandos que você pode explorar**
-##☄️ Aperfeiçoamento contínuo 
+
+## ☄️ Aperfeiçoamento contínuo 
 - Estamos sempre trabalhando para tornar sua jornada ainda mais iluminada e personalizada.
 
 ## 🌟 A Jornada do Blackout
