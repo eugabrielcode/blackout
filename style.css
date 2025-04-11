@@ -289,20 +289,18 @@ header {
 /* Media Query para dispositivos móveis */
 @media (max-width: 768px) {
   header {
-    padding: 10px 20px;
+    padding: 30px 20px 15px;
     justify-content: center;
     position: relative;
   }
-  
-  /* Logo centralizada */
+
   .logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5rem;
   }
-  
-  /* Bot-status ajustado */
+
   .bot-status {
     position: absolute;
     right: 20px;
@@ -311,36 +309,38 @@ header {
     font-size: 0.7rem;
     padding: 6px 10px;
   }
-  
-  /* Oculta o menu padrão */
+
   .menu {
-    display: none;
-    flex-direction: column;
     position: absolute;
-    top: 60px; /* Abaixo do header */
+    top: 60px;
     left: 0;
     width: 100%;
-    gap: 15px;
+    flex-direction: column;
     background: rgba(0, 0, 0, 0.95);
     padding: 20px 0;
-    z-index: 20;
-    transition: opacity 0.5s ease-in-out 0.3s; 
+    gap: 15px;
+    z-index: 98;
+
+    /* Animação suave */
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
+
   .menu.active {
-    display: flex;
-    z-index: 99;
-    transition: opacity 0.5s ease-in-out 0s;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
   }
-  
+
   .menu a {
     font-size: 1.2rem;
     text-align: center;
     padding: 5px 0;
     z-index: 99;
   }
-  
-  /* Exibe o menu hamburguer no lado esquerdo */
+
   .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -351,15 +351,26 @@ header {
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 99;
+    transition: transform 0.3s ease;
   }
-  
-  .hamburger-menu .line {
-    width: 25px;
-    height: 4px;
-    background: white;
+
+  .hamburger-menu div {
+    width: 30px;
+    height: 5px;
+    background-color: white;
     border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .hamburger-menu.open div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger-menu.open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.open div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
   }
 }
-
-
-
