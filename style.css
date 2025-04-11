@@ -256,6 +256,7 @@ header {
 .botao-convite.secundario:hover {
   background: white;
   color: black;
+  transform: translateY(-2px);
 }
 
 .social-links {
