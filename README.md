@@ -12,7 +12,7 @@
 ## 🌐 Site
 
 Você pode acessar o site do projeto através do seguinte link:  
-[Blackout Bot - Em Busca da Luz](https://eugabrielcode.github.io/blackoutbot)
+[Blackout Bot - Em Busca da Luz](https://eugabrielcode.github.io/blackout)
 
 ## 📜 Comandos
 
